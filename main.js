@@ -1,119 +1,126 @@
-/**
- * Portfolio — Main JavaScript
- * ============================
- * 1. Navbar scroll effect
- * 2. Mobile menu toggle
- * 3. Scroll-to-top button
- * 4. Scroll fade-in animations
- * 5. Active nav link highlight
- */
+/* ============================================
+   main.js — Wei Ying Portfolio
+   ============================================ */
 
-document.addEventListener("DOMContentLoaded", () => {
-  /* ---------------------------------------------------
-     DOM REFERENCES
-     --------------------------------------------------- */
-  const navbar      = document.getElementById("navbar");
-  const navToggle   = document.getElementById("navToggle");
-  const navMenu     = document.getElementById("navMenu");
-  const scrollTopBtn = document.getElementById("scrollTop");
-  const fadeElements = document.querySelectorAll(".fade-in");
-  const navLinks     = document.querySelectorAll(".navbar__menu a");
-  const sections     = document.querySelectorAll(".section, .hero");
+'use strict';
 
-  /* ---------------------------------------------------
-     1. NAVBAR — Shrink & blur on scroll
-     --------------------------------------------------- */
-  function handleNavbarScroll() {
-    navbar.classList.toggle("scrolled", window.scrollY > 50);
+// ── Navbar scroll effect ──────────────────────
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
   }
+});
 
-  /* ---------------------------------------------------
-     2. MOBILE MENU — Open / close
-     --------------------------------------------------- */
-  function toggleMenu() {
-    navMenu.classList.toggle("active");
-  }
+// ── Mobile nav toggle ─────────────────────────
+const navToggle = document.getElementById('navToggle');
+const navMenu   = document.getElementById('navMenu');
 
-  function closeMenu() {
-    navMenu.classList.remove("active");
-  }
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('open');
+  navToggle.classList.toggle('active');
+});
 
-  /* ---------------------------------------------------
-     3. SCROLL-TO-TOP — Show / hide button
-     --------------------------------------------------- */
-  function handleScrollTopVisibility() {
-    scrollTopBtn.classList.toggle("visible", window.scrollY > 400);
-  }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  /* ---------------------------------------------------
-     4. FADE-IN ON SCROLL — Intersection Observer
-     --------------------------------------------------- */
-  const fadeObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          fadeObserver.unobserve(entry.target);       // animate once
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  fadeElements.forEach((el) => fadeObserver.observe(el));
-
-  /* ---------------------------------------------------
-     5. ACTIVE NAV LINK — Highlight on scroll
-     --------------------------------------------------- */
-  const sectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute("id");
-
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${id}`) {
-              link.classList.add("active");
-            }
-          });
-        }
-      });
-    },
-    { rootMargin: "-50% 0px -50% 0px" }
-  );
-
-  sections.forEach((section) => sectionObserver.observe(section));
-
-  /* ---------------------------------------------------
-     EVENT LISTENERS
-     --------------------------------------------------- */
-  window.addEventListener("scroll", () => {
-    handleNavbarScroll();
-    handleScrollTopVisibility();
+// Close menu when a link is clicked
+navMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    navToggle.classList.remove('active');
   });
+});
 
-  navToggle.addEventListener("click", toggleMenu);
+// ── Active nav link on scroll ─────────────────
+const sections = document.querySelectorAll('section[id]');
 
-  // Close mobile menu when any link is clicked
-  navLinks.forEach((link) => {
-    link.addEventListener("click", closeMenu);
-  });
+function updateActiveLink() {
+  const scrollY = window.scrollY + 100;
 
-  scrollTopBtn.addEventListener("click", scrollToTop);
+  sections.forEach(section => {
+    const top    = section.offsetTop;
+    const height = section.offsetHeight;
+    const id     = section.getAttribute('id');
+    const link   = navMenu.querySelector(`a[href="#${id}"]`);
 
-  // Close mobile menu on outside click
-  document.addEventListener("click", (e) => {
-    if (
-      navMenu.classList.contains("active") &&
-      !navMenu.contains(e.target) &&
-      !navToggle.contains(e.target)
-    ) {
-      closeMenu();
+    if (link) {
+      if (scrollY >= top && scrollY < top + height) {
+        navMenu.querySelectorAll('a').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      }
     }
   });
+}
+
+window.addEventListener('scroll', updateActiveLink);
+updateActiveLink();
+
+// ── Scroll-to-top button ──────────────────────
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ── Fade-in on scroll (IntersectionObserver) ──
+const fadeEls = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger siblings slightly
+        const siblings = entry.target.parentElement.querySelectorAll('.fade-in');
+        let delay = 0;
+        siblings.forEach((el, idx) => {
+          if (el === entry.target) delay = idx * 80;
+        });
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+fadeEls.forEach(el => observer.observe(el));
+
+// ── Smooth scroll for all anchor links ───────
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const offset = navbar.offsetHeight + 16;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ── Hamburger icon animation ──────────────────
+const spans = navToggle.querySelectorAll('span');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navMenu.classList.contains('open');
+  if (isOpen) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+    spans[1].style.opacity   = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  } else {
+    spans[0].style.transform = '';
+    spans[1].style.opacity   = '';
+    spans[2].style.transform = '';
+  }
 });
