@@ -29,15 +29,14 @@
        ============================================ -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <!-- EDIT: Your logo / name -->
       <a href="#" class="navbar__logo">WY<span>.</span></a>
 
       <ul class="navbar__menu" id="navMenu">
-        <!-- EDIT: Navigation links -->
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -55,31 +54,31 @@
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero__content">
-        <!-- EDIT: Greeting -->
         <p class="hero__greeting">👋 Hello, I'm</p>
-
-        <!-- EDIT: Your name -->
         <h1 class="hero__name">Yaw Wei Ying</h1>
+        <h2 class="hero__title">A <span>Data Science Student</span></h2>
 
-        <!-- EDIT: Your title -->
-        <h2 class="hero__title">A <span>Data Scientist Students</span></h2>
+        <p class="hero__description">
+          Motivated Data Science student with strong interest in data analytics and software development.
+          Experienced in academic projects, part-time teaching, and volunteering, with strong communication,
+          teamwork, and problem-solving skills. Seeking internship opportunities to apply technical knowledge
+          in real-world environments.
+        </p>
 
-        <!-- EDIT: Short bio -->
-        <p class="hero__description"> Passionate about data analysis, machine learning, and building intelligent systems. 
-          I enjoy transforming raw data into meaningful insights and practical solutions. 
-        </p> 
-        <div class="hero__buttons"> 
-          <a href="#projects" class="btn btn--primary">View My Work ↓</a> 
-          <a href="#contact" class="btn btn--outline">Contact Me</a> 
-        </div> 
-        <div class="hero__socials"> 
-          <a href="https://github.com/Wy-acc"><i class="lucide-github"></i></a> 
+        <div class="hero__buttons">
+          <a href="#projects" class="btn btn--primary">View My Work ↓</a>
+          <a href="#contact" class="btn btn--outline">Contact Me</a>
+        </div>
+
+        <div class="hero__socials">
+          <a href="https://github.com/Wy-acc"><i class="lucide-github"></i></a>
           <a href="https://linkedin.com/in/yaw-wei-ying-1b46333b9/"><i class="lucide-linkedin"></i></a>
-          <a href="mailto:purpleying0515@gmail.com"><i class="lucide-mail"></i></a> </div> </div>
+          <a href="mailto:purpleying0515@gmail.com"><i class="lucide-mail"></i></a>
+        </div>
+      </div>
 
       <div class="hero__image">
         <div class="hero__image-wrapper">
-          <!-- EDIT: Your photo -->
           <img
             src="https://i.pinimg.com/474x/74/82/c9/7482c9471ddef7cb323010c1a4a102fd.jpg"
             alt="Wei Ying"
@@ -95,7 +94,6 @@
   <section class="section about" id="about">
     <div class="container">
       <div class="about__image fade-in">
-        <!-- EDIT: About image -->
         <img
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=500&fit=crop"
           alt="Working on laptop"
@@ -104,42 +102,40 @@
 
       <div class="about__text fade-in">
         <span class="section__label">About Me</span>
-        <h2 class="section__title">Crafting digital products with purpose</h2>
+        <h2 class="section__title">Crafting data solutions with purpose</h2>
 
         <p class="section__subtitle">
-          I am currently pursuing a Bachelor of Computer Science (Data Science),
-          with strong interest in machine learning, data analytics, and AI systems.
+          I am currently pursuing a Bachelor of Data Science (Honours) at
+          Tunku Abdul Rahman University of Management and Technology (TARUMT), Kuala Lumpur.
         </p>
 
-       <p class="about__paragraph">
-          I have worked on academic projects involving customer segmentation,
-          data visualization, and predictive modeling using Python and SQL.
-        </p>
-        
         <p class="about__paragraph">
-          My goal is to become a Data Scientist or Data Analyst, applying data-driven
-          solutions to real-world problems.
+          My academic journey has equipped me with knowledge in data analytics,
+          machine learning, and software development, supported by hands-on projects.
         </p>
-          
 
-        <!-- EDIT: Resume link -->
+        <p class="about__paragraph">
+          In addition to my studies, I have gained real-world experience through
+          part-time teaching roles and volunteer activities, strengthening my
+          communication, adaptability, and teamwork skills.
+        </p>
+
         <a href="#" class="btn btn--primary" download>
           <i class="lucide-download"></i> Download Resume
         </a>
 
-        <!-- EDIT: Stats -->
         <div class="about__stats">
           <div class="about__stat">
-             <div class="about__stat-number">10+</div>
-             <div class="about__stat-label">Projects Completed</div>
+            <div class="about__stat-number">10+</div>
+            <div class="about__stat-label">Projects Completed</div>
           </div>
           <div class="about__stat">
             <div class="about__stat-number">3+</div>
-            <div class="about__stat-label">Data Tools Used</div>
+            <div class="about__stat-label">Years Teaching</div>
           </div>
           <div class="about__stat">
-            <div class="about__stat-number">1</div>
-            <div class="about__stat-label">Final Year Project</div>
+            <div class="about__stat-number">3.64</div>
+            <div class="about__stat-label">Foundation CGPA</div>
           </div>
         </div>
       </div>
@@ -152,27 +148,25 @@
   <section class="section section--center" id="skills">
     <div class="container">
       <span class="section__label">What I Do</span>
-      <h2 class="section__title">My Skills & Services</h2>
+      <h2 class="section__title">My Skills & Expertise</h2>
       <p class="section__subtitle">
-        I bring a diverse skill set to every project, ensuring end-to-end
-        quality from concept to deployment.
+        I bring a diverse skill set to every project, from data analysis and machine learning
+        to web development and database management.
       </p>
 
-      <!-- EDIT: Skill cards — duplicate / remove as needed -->
       <div class="skills__grid">
         <!-- Skill 1 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
             <i class="lucide-layout-dashboard"></i>
           </div>
-          <h3 class="skill-card__title">Data Analysis</h3>
+          <h3 class="skill-card__title">Data Analytics</h3>
           <p class="skill-card__description">
-            Cleaning, analyzing, and interpreting datasets to extract insights.
+            Cleaning, analyzing, and interpreting datasets to extract actionable insights using statistical methods.
           </p>
           <div class="skill-card__tags">
             <span class="skill-card__tag">Python</span>
-            <span class="skill-card__tag">Pandas</span>
-            <span class="skill-card__tag">NumPy</span>
+            <span class="skill-card__tag">Statistics</span>
             <span class="skill-card__tag">Excel</span>
           </div>
         </div>
@@ -184,54 +178,56 @@
           </div>
           <h3 class="skill-card__title">Machine Learning</h3>
           <p class="skill-card__description">
-            Building predictive models and clustering techniques.
+            Building predictive models and applying ML techniques at academic level.
           </p>
           <div class="skill-card__tags">
+            <span class="skill-card__tag">Python</span>
             <span class="skill-card__tag">Scikit-learn</span>
-            <span class="skill-card__tag">K-Means</span>
-            <span class="skill-card__tag">Regression</span>
+            <span class="skill-card__tag">Java</span>
           </div>
         </div>
 
         <!-- Skill 3 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-smartphone"></i>
+            <i class="lucide-bar-chart-2"></i>
           </div>
-          <h3 class="skill-card__title">Data Visualization</h3>
+          <h3 class="skill-card__title">Data Visualisation</h3>
           <p class="skill-card__description">
-            Presenting data using clear and meaningful visuals.
+            Presenting data using clear and meaningful visuals to support decision-making.
           </p>
           <div class="skill-card__tags">
             <span class="skill-card__tag">Matplotlib</span>
-            <span class="skill-card__tag">SAS</span>
             <span class="skill-card__tag">Seaborn</span>
+            <span class="skill-card__tag">Excel</span>
           </div>
         </div>
 
         <!-- Skill 4 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-cloud"></i>
+            <i class="lucide-code-2"></i>
           </div>
-          <h3 class="skill-card__title">Cloud</h3>
+          <h3 class="skill-card__title">Programming</h3>
           <p class="skill-card__description">
-            Setting up cloud infrastructure for reliable deployments.
+            Writing clean and efficient code across multiple programming languages for various applications.
           </p>
           <div class="skill-card__tags">
-            <span class="skill-card__tag">AWS</span>
+            <span class="skill-card__tag">Python</span>
+            <span class="skill-card__tag">Java</span>
+            <span class="skill-card__tag">JavaScript</span>
+            <span class="skill-card__tag">C++</span>
           </div>
         </div>
 
         <!-- Skill 5 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-test-tubes"></i>
+            <i class="lucide-database"></i>
           </div>
           <h3 class="skill-card__title">Database Management</h3>
           <p class="skill-card__description">
-            Writing comprehensive tests to ensure code reliability and prevent
-            regressions across the entire stack.
+            Designing and querying relational databases to store and retrieve structured data efficiently.
           </p>
           <div class="skill-card__tags">
             <span class="skill-card__tag">MySQL</span>
@@ -242,12 +238,11 @@
         <!-- Skill 6 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-zap"></i>
+            <i class="lucide-globe"></i>
           </div>
           <h3 class="skill-card__title">Web Development</h3>
           <p class="skill-card__description">
-            Analyzing and improving load times, Core Web Vitals, and overall
-            application performance metrics.
+            Building clean, responsive web pages with fundamental front-end technologies.
           </p>
           <div class="skill-card__tags">
             <span class="skill-card__tag">HTML</span>
@@ -256,6 +251,35 @@
           </div>
         </div>
       </div>
+
+      <!-- Languages Sub-section -->
+      <div class="languages__block" id="languages">
+        <span class="section__label" style="margin-top: 3rem; display:block;">Communication</span>
+        <h2 class="section__title">Languages</h2>
+        <div class="skills__grid" style="margin-top: 1.5rem;">
+          <div class="skill-card fade-in">
+            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <h3 class="skill-card__title">Mandarin</h3>
+            <p class="skill-card__description">Native Speaker</p>
+          </div>
+          <div class="skill-card fade-in">
+            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <h3 class="skill-card__title">English</h3>
+            <p class="skill-card__description">Intermediate</p>
+          </div>
+          <div class="skill-card fade-in">
+            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <h3 class="skill-card__title">Cantonese</h3>
+            <p class="skill-card__description">Intermediate</p>
+          </div>
+          <div class="skill-card fade-in">
+            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <h3 class="skill-card__title">Malay</h3>
+            <p class="skill-card__description">Intermediate</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -267,11 +291,10 @@
       <span class="section__label">My Work</span>
       <h2 class="section__title">Featured Projects</h2>
       <p class="section__subtitle">
-        A selection of projects I've worked on — from concept through design
-        and development to deployment.
+        A selection of academic and personal projects I've worked on — from data analysis
+        to full system development.
       </p>
 
-      <!-- EDIT: Project cards — duplicate / remove as needed -->
       <div class="projects__grid">
         <!-- Project 1 -->
         <div class="project-card fade-in">
@@ -284,23 +307,23 @@
               <a href="#" target="_blank" aria-label="Live Demo">
                 <i class="lucide-external-link"></i>
               </a>
-              <a href="#" target="_blank" aria-label="Source Code">
+              <a href="https://github.com/Wy-acc" target="_blank" aria-label="Source Code">
                 <i class="lucide-github"></i>
               </a>
             </div>
           </div>
           <div class="project-card__body">
-            <p class="project-card__category">Web Application</p>
-            <h3 class="project-card__title">Analytics Dashboard</h3>
+            <p class="project-card__category">Data Analysis</p>
+            <h3 class="project-card__title">Customer Segmentation</h3>
             <p class="project-card__text">
-              A real-time analytics dashboard with customizable widgets,
-              interactive charts, and data export capabilities.
+              Applied clustering techniques to segment customers based on purchasing behaviour,
+              enabling targeted marketing strategies.
             </p>
             <div class="project-card__stack">
-              <span>React</span>
-              <span>D3.js</span>
-              <span>Node.js</span>
-              <span>PostgreSQL</span>
+              <span>Python</span>
+              <span>K-Means</span>
+              <span>Pandas</span>
+              <span>Seaborn</span>
             </div>
           </div>
         </div>
@@ -310,22 +333,23 @@
           <div class="project-card__image">
             <img
               src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
-              alt="ShopWave Store"
+              alt="Internship Matching System"
             />
             <div class="project-card__overlay">
               <a href="#" target="_blank" aria-label="Live Demo">
                 <i class="lucide-external-link"></i>
               </a>
-              <a href="#" target="_blank" aria-label="Source Code">
+              <a href="https://github.com/Wy-acc" target="_blank" aria-label="Source Code">
                 <i class="lucide-github"></i>
               </a>
             </div>
           </div>
           <div class="project-card__body">
-            <p class="project-card__category">Matching System</p>
+            <p class="project-card__category">System Development</p>
             <h3 class="project-card__title">Internship Job Matching System</h3>
             <p class="project-card__text">
-              Developed a Java-based system that matches applicants with jobs using scoring algorithms based on skills, location, and preferences.
+              Developed a Java-based system that matches applicants with jobs using scoring
+              algorithms based on skills, location, and preferences.
             </p>
             <div class="project-card__stack">
               <span>Java</span>
@@ -338,30 +362,30 @@
         <div class="project-card fade-in">
           <div class="project-card__image">
             <img
-              src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
-              alt="FitTrack Pro"
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
+              alt="Data Visualisation Project"
             />
             <div class="project-card__overlay">
               <a href="#" target="_blank" aria-label="Live Demo">
                 <i class="lucide-external-link"></i>
               </a>
-              <a href="#" target="_blank" aria-label="Source Code">
+              <a href="https://github.com/Wy-acc" target="_blank" aria-label="Source Code">
                 <i class="lucide-github"></i>
               </a>
             </div>
           </div>
           <div class="project-card__body">
-            <p class="project-card__category">Mobile App</p>
-            <h3 class="project-card__title">FitTrack Pro</h3>
+            <p class="project-card__category">Data Visualisation</p>
+            <h3 class="project-card__title">Predictive Modelling Dashboard</h3>
             <p class="project-card__text">
-              Cross-platform fitness tracking app with workout plans, progress
-              analytics, and social features.
+              Built a predictive model with data visualisation to present findings in a
+              clear, interactive format for academic review.
             </p>
             <div class="project-card__stack">
-              <span>React Native</span>
-              <span>Firebase</span>
-              <span>Redux</span>
-              <span>Charts</span>
+              <span>Python</span>
+              <span>Matplotlib</span>
+              <span>Scikit-learn</span>
+              <span>MySQL</span>
             </div>
           </div>
         </div>
@@ -377,21 +401,22 @@
       <span class="section__label">My Journey</span>
       <h2 class="section__title">Work Experience</h2>
       <p class="section__subtitle">
-        A timeline of my professional journey, highlighting key roles and
-        contributions.
+        Real-world experience gained through part-time roles that sharpened my
+        communication, adaptability, and teamwork skills.
       </p>
 
-      <!-- EDIT: Timeline items — duplicate / remove as needed -->
       <div class="timeline">
         <!-- Experience 1 -->
         <div class="timeline__item fade-in">
           <div class="timeline__dot"></div>
-          <span class="timeline__date">2022 — Present</span>
+          <span class="timeline__date">2022 — 2025</span>
           <div class="timeline__content">
-            <h3 class="timeline__role">Data Science Student</h3>
-            <p class="timeline__company">TARUMT</p>
+            <h3 class="timeline__role">Teacher Assistant (Part-time)</h3>
+            <p class="timeline__company">TreeHouse ChildCare</p>
             <p class="timeline__text">
-              Working on machine learning, data analysis, and system development projects.
+              Assisted teachers in delivering lessons and supporting classroom activities.
+              Led classes as a substitute teacher and adapted to different learning needs.
+              Developed strong communication, patience, and teamwork skills.
             </p>
           </div>
         </div>
@@ -399,43 +424,85 @@
         <!-- Experience 2 -->
         <div class="timeline__item fade-in">
           <div class="timeline__dot"></div>
-          <span class="timeline__date">2020 — 2022</span>
+          <span class="timeline__date">2022 — 2023</span>
           <div class="timeline__content">
-            <h3 class="timeline__role">Frontend Developer</h3>
-            <p class="timeline__company">DesignStudio Agency</p>
+            <h3 class="timeline__role">Teacher Assistant (Part-time)</h3>
+            <p class="timeline__company">Megamind</p>
             <p class="timeline__text">
-              Developed responsive web applications for 20+ clients.
-              Implemented design systems, improved Lighthouse scores to 95+,
-              and introduced automated testing workflows.
+              Supported lesson preparation and classroom management.
+              Assisted students and provided guidance during learning activities.
+              Demonstrated responsibility and adaptability in a dynamic teaching environment.
             </p>
           </div>
         </div>
 
-        <!-- Experience 3 -->
+        <!-- Volunteer 1 -->
         <div class="timeline__item fade-in">
           <div class="timeline__dot"></div>
-          <span class="timeline__date">2019 — 2020</span>
+          <span class="timeline__date">2025</span>
           <div class="timeline__content">
-            <h3 class="timeline__role">Junior Developer</h3>
-            <p class="timeline__company">StartupXYZ</p>
+            <h3 class="timeline__role">Blood Donation Campaign Committee Member</h3>
+            <p class="timeline__company">Volunteer Activity</p>
             <p class="timeline__text">
-              Built and maintained features for the company's core product.
-              Worked closely with designers and product managers in an agile
-              environment.
+              Managed refreshment distribution for donors and organized certificate distribution efficiently.
+              Worked with team members to ensure smooth event execution.
             </p>
           </div>
         </div>
 
-        <!-- Education -->
+        <!-- Volunteer 2 -->
         <div class="timeline__item fade-in">
           <div class="timeline__dot"></div>
-          <span class="timeline__date">2019</span>
+          <span class="timeline__date">2023 — Present</span>
           <div class="timeline__content">
-            <h3 class="timeline__role">B.S. Computer Science</h3>
-            <p class="timeline__company">University of Technology</p>
+            <h3 class="timeline__role">Community Service Volunteer</h3>
+            <p class="timeline__company">Temple Community Service</p>
             <p class="timeline__text">
-              Graduated with honors. Focused on software engineering,
-              algorithms, and human-computer interaction.
+              Prepared and distributed vegetarian meals to the community. Maintained hygiene
+              and organization during service. Contributed to a positive and supportive environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EDUCATION SECTION
+       ============================================ -->
+  <section class="section section--center" id="education">
+    <div class="container">
+      <span class="section__label">Academic Background</span>
+      <h2 class="section__title">Education</h2>
+      <p class="section__subtitle">
+        My academic path, shaped by dedication to data science and consistently strong results.
+      </p>
+
+      <div class="timeline">
+        <!-- Degree -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2024 — Present</span>
+          <div class="timeline__content">
+            <h3 class="timeline__role">Bachelor of Data Science (Honours)</h3>
+            <p class="timeline__company">TARUMT, Kuala Lumpur</p>
+            <p class="timeline__text">
+              Pursuing a degree with focus on data analytics, machine learning,
+              and software development through hands-on academic projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- Foundation -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2022 — 2023</span>
+          <div class="timeline__content">
+            <h3 class="timeline__role">Foundation in Computing (Track A)</h3>
+            <p class="timeline__company">TARUMT, Kuala Lumpur</p>
+            <p class="timeline__text">
+              Graduated with a CGPA of 3.64. Achieved President's List in Semester 1
+              and Dean's List in Semester 2, reflecting consistent academic excellence.
             </p>
           </div>
         </div>
@@ -452,10 +519,19 @@
         <span class="section__label">Get In Touch</span>
         <h2 class="section__title">Let's work together</h2>
         <p class="section__subtitle">
-          Have a project in mind or just want to chat? I'd love to hear from you. 
+          Have an internship opportunity or just want to connect? I'd love to hear from you.
         </p>
 
-        <!-- EDIT: Contact information -->
+        <div class="contact__info-item">
+          <div class="contact__info-icon">
+            <i class="lucide-phone"></i>
+          </div>
+          <div>
+            <div class="contact__info-label">Phone</div>
+            <div class="contact__info-value">+6016-9444131</div>
+          </div>
+        </div>
+
         <div class="contact__info-item">
           <div class="contact__info-icon">
             <i class="lucide-mail"></i>
@@ -472,9 +548,20 @@
           </div>
           <div>
             <div class="contact__info-label">Location</div>
-            <div class="contact__info-value">Selangor, Malaysia</div>
+            <div class="contact__info-value">Puchong, Selangor</div>
           </div>
         </div>
+
+        <div class="contact__info-item">
+          <div class="contact__info-icon">
+            <i class="lucide-user"></i>
+          </div>
+          <div>
+            <div class="contact__info-label">Reference — Ms. Joan Hau (Supervisor)</div>
+            <div class="contact__info-value">+6016-3653955 · joan@tarc.edu.my</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -487,8 +574,8 @@
         © 2026 <span>Wei Ying</span>. Built with ❤️ and clean code.
       </p>
       <div class="footer__links">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Wy-acc" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yaw-wei-ying-1b46333b9/" target="_blank">LinkedIn</a>
         <a href="mailto:purpleying0515@gmail.com">Email</a>
       </div>
     </div>
