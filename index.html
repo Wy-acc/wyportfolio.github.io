@@ -13,9 +13,6 @@
     rel="stylesheet"
   />
 
-  <!-- Icons (Lucide) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.511.0/font/lucide.css" />
-
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -66,10 +63,10 @@
           <a href="#contact" class="btn btn--outline">Contact Me</a>
         </div>
 
-      <div class="hero__socials">
-          <a href="https://github.com/Wy-acc"><i class="lucide-github"></i></a>
-          <a href="https://linkedin.com/in/yaw-wei-ying-1b46333b9/"><i class="lucide-linkedin"></i></a>
-          <a href="mailto:purpleying0515@gmail.com"><i class="lucide-mail"></i></a>
+        <div class="hero__socials">
+          <a href="https://github.com/Wy-acc"><i data-lucide="github"></i></a>
+          <a href="https://linkedin.com/in/yaw-wei-ying-1b46333b9/"><i data-lucide="linkedin"></i></a>
+          <a href="mailto:purpleying0515@gmail.com"><i data-lucide="mail"></i></a>
         </div>
       </div>
         
@@ -146,7 +143,7 @@
         <!-- Skill 1 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-layout-dashboard"></i>
+            <i data-lucide="layout-dashboard"></i>
           </div>
           <h3 class="skill-card__title">Data Analytics</h3>
           <p class="skill-card__description">
@@ -162,7 +159,7 @@
         <!-- Skill 2 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-server"></i>
+            <i data-lucide="server"></i>
           </div>
           <h3 class="skill-card__title">Machine Learning</h3>
           <p class="skill-card__description">
@@ -177,7 +174,7 @@
         <!-- Skill 3 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-bar-chart-2"></i>
+            <i data-lucide="bar-chart-2"></i>
           </div>
           <h3 class="skill-card__title">Data Visualisation</h3>
           <p class="skill-card__description">
@@ -193,7 +190,7 @@
         <!-- Skill 4 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-code-2"></i>
+            <i data-lucide="code-2"></i>
           </div>
           <h3 class="skill-card__title">Programming</h3>
           <p class="skill-card__description">
@@ -210,7 +207,7 @@
         <!-- Skill 5 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-database"></i>
+            <i data-lucide="database"></i>
           </div>
           <h3 class="skill-card__title">Database Management</h3>
           <p class="skill-card__description">
@@ -225,7 +222,7 @@
         <!-- Skill 6 -->
         <div class="skill-card fade-in">
           <div class="skill-card__icon">
-            <i class="lucide-globe"></i>
+            <i data-lucide="globe"></i>
           </div>
           <h3 class="skill-card__title">Web Development</h3>
           <p class="skill-card__description">
@@ -245,22 +242,22 @@
         <h2 class="section__title">Languages</h2>
         <div class="skills__grid" style="margin-top: 1.5rem;">
           <div class="skill-card fade-in">
-            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <div class="skill-card__icon"><i data-lucide="message-circle"></i></div>
             <h3 class="skill-card__title">Mandarin</h3>
             <p class="skill-card__description">Native Speaker</p>
           </div>
           <div class="skill-card fade-in">
-            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <div class="skill-card__icon"><i data-lucide="message-circle"></i></div>
             <h3 class="skill-card__title">English</h3>
             <p class="skill-card__description">Intermediate</p>
           </div>
           <div class="skill-card fade-in">
-            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <div class="skill-card__icon"><i data-lucide="message-circle"></i></div>
             <h3 class="skill-card__title">Cantonese</h3>
             <p class="skill-card__description">Intermediate</p>
           </div>
           <div class="skill-card fade-in">
-            <div class="skill-card__icon"><i class="lucide-message-circle"></i></div>
+            <div class="skill-card__icon"><i data-lucide="message-circle"></i></div>
             <h3 class="skill-card__title">Malay</h3>
             <p class="skill-card__description">Intermediate</p>
           </div>
@@ -283,37 +280,38 @@
       </p>
 
       <div class="projects__grid">
-        <!-- Project 1  -->
-      <div class="project-card fade-in">
-        <div class="project-card__image">
-          <video autoplay muted loop playsinline>
-            <source src="https://github.com/Wy-acc/Machine-Learning_Reinforcement-Learning/raw/main/demo.mp4" type="video/mp4">
-          </video>
-          <div class="project-card__overlay">
-            <a href="https://github.com/Wy-acc/Machine-Learning_Reinforcement-Learning" target="_blank" aria-label="Source Code">
-              <i class="lucide-github"></i>
-            </a>
+        <!-- Project 1 -->
+        <div class="project-card fade-in">
+          <div class="project-card__image">
+            <video autoplay muted loop playsinline>
+              <source src="https://github.com/Wy-acc/Machine-Learning_Reinforcement-Learning/raw/main/demo.mp4" type="video/mp4">
+            </video>
+            <div class="project-card__overlay">
+              <a href="https://github.com/Wy-acc/Machine-Learning_Reinforcement-Learning" target="_blank" aria-label="Source Code">
+                <i data-lucide="github"></i>
+              </a>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">Machine Learning</p>
+            <h3 class="project-card__title">Obesity Level Classification with RL</h3>
+            <p class="project-card__text">
+              Built a reinforcement learning-based health coach system to classify obesity levels
+              using DQN, PPO, AC and SAC agents. Includes data preprocessing, BMI feature engineering,
+              and comparison of Epsilon-Greedy vs Boltzmann exploration strategies.
+            </p>
+            <div class="project-card__stack">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>Scikit-learn</span>
+              <span>DQN</span>
+              <span>PPO</span>
+              <span>AC</span>
+              <span>SAC</span>
+            </div>
           </div>
         </div>
-        <div class="project-card__body">
-          <p class="project-card__category">Machine Learning</p>
-          <h3 class="project-card__title">Obesity Level Classification with RL</h3>
-          <p class="project-card__text">
-            Built a reinforcement learning-based health coach system to classify obesity levels
-            using DQN, PPO, AC and SAC agents. Includes data preprocessing, BMI feature engineering,
-            and comparison of Epsilon-Greedy vs Boltzmann exploration strategies.
-          </p>
-          <div class="project-card__stack">
-            <span>Python</span>
-            <span>PyTorch</span>
-            <span>Scikit-learn</span>
-            <span>DQN</span>
-            <span>PPO</span>
-            <span>AC</span>
-            <span>SAC</span>
-          </div>
-        </div>
-      </div>
+
         <!-- Project 2 -->
         <div class="project-card fade-in">
           <div class="project-card__image">
@@ -323,7 +321,7 @@
             />
             <div class="project-card__overlay">
               <a href="https://github.com/Wy-acc/dsa" target="_blank" aria-label="Source Code">
-                <i class="lucide-github"></i>
+                <i data-lucide="github"></i>
               </a>
             </div>
           </div>
@@ -350,7 +348,7 @@
             />
             <div class="project-card__overlay">
               <a href="https://github.com/Wy-acc/data-visualization" target="_blank" aria-label="Source Code">
-                <i class="lucide-github"></i>
+                <i data-lucide="github"></i>
               </a>
             </div>
           </div>
@@ -358,8 +356,8 @@
             <p class="project-card__category">Data Analytics</p>
             <h3 class="project-card__title">Consumer Behaviour Analysis Dashboard</h3>
             <p class="project-card__text">
-              Performed data preprocessing, transformation, and hypothesis-driven analysis using SAS, 
-              and developed visualisations (bar charts, heatmaps, and bubble charts) to uncover insights 
+              Performed data preprocessing, transformation, and hypothesis-driven analysis using SAS,
+              and developed visualisations (bar charts, heatmaps, and bubble charts) to uncover insights
               on consumer preferences, brand perception, and promotional impact.
             </p>
             <div class="project-card__stack">
@@ -370,6 +368,7 @@
             </div>
           </div>
         </div>
+
         <!-- Project 4 -->
         <div class="project-card fade-in">
           <div class="project-card__image">
@@ -379,7 +378,7 @@
             />
             <div class="project-card__overlay">
               <a href="https://github.com/Wy-acc/web" target="_blank" aria-label="Source Code">
-                <i class="lucide-github"></i>
+                <i data-lucide="github"></i>
               </a>
             </div>
           </div>
@@ -401,136 +400,133 @@
             </a>
           </div>
         </div>
+
         <!-- Project 5 -->
         <div class="project-card fade-in">
-            <div class="project-card__image">
-              <video autoplay muted loop playsinline>
-                <source src="https://raw.githubusercontent.com/Wy-acc/wyportfolio.github.io/main/fypdemo.mp4" type="video/mp4">
-              </video>
-              <div class="project-card__overlay">
-                <a href="#" target="_blank" aria-label="Coming Soon">
-                  <i class="lucide-clock"></i>
-                </a>
-              </div>
+          <div class="project-card__image">
+            <video autoplay muted loop playsinline>
+              <source src="https://raw.githubusercontent.com/Wy-acc/wyportfolio.github.io/main/fypdemo.mp4" type="video/mp4">
+            </video>
+            <div class="project-card__overlay">
+              <a href="#" target="_blank" aria-label="Coming Soon">
+                <i data-lucide="clock"></i>
+              </a>
             </div>
-          
-            <div class="project-card__body">
-              <p class="project-card__category">Final Year Project (In Progress)</p>
-              <h3 class="project-card__title">OCR System for Text Recognition</h3>
-              <p class="project-card__text">
-                Developing a system that extracts and translates text from multi-column images
-                using OCR and natural language processing techniques. The project focuses on
-                accurately detecting column layouts, preserving reading order, and translating
-                extracted text into English or Chinese. Applications include document digitisation,
-                multilingual content processing, and automated translation workflows.
-              </p>
-          
-              <div class="project-card__stack">
-                <span>Python</span>
-                <span>OCR</span>
-                <span>PaddleOCR</span>
-                <span>NLP</span>
-                <span>Translation</span>
-                <span>OpenCV</span>
-                <span>YOLO</span>
-              </div>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__category">Final Year Project (In Progress)</p>
+            <h3 class="project-card__title">OCR System for Text Recognition</h3>
+            <p class="project-card__text">
+              Developing a system that extracts and translates text from multi-column images
+              using OCR and natural language processing techniques. The project focuses on
+              accurately detecting column layouts, preserving reading order, and translating
+              extracted text into English or Chinese. Applications include document digitisation,
+              multilingual content processing, and automated translation workflows.
+            </p>
+            <div class="project-card__stack">
+              <span>Python</span>
+              <span>OCR</span>
+              <span>PaddleOCR</span>
+              <span>NLP</span>
+              <span>Translation</span>
+              <span>OpenCV</span>
+              <span>YOLO</span>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-     EXPERIENCE SECTION
-     ============================================ -->
-<section class="section section--center" id="experience">
-  <div class="container">
-    <span class="section__label">My Journey</span>
-    <h2 class="section__title">Work Experience</h2>
-    <p class="section__subtitle">
-      Real-world experience gained through part-time roles that sharpened my
-      communication, adaptability, and teamwork skills.
-    </p>
+       EXPERIENCE SECTION
+       ============================================ -->
+  <section class="section section--center" id="experience">
+    <div class="container">
+      <span class="section__label">My Journey</span>
+      <h2 class="section__title">Work Experience</h2>
+      <p class="section__subtitle">
+        Real-world experience gained through part-time roles that sharpened my
+        communication, adaptability, and teamwork skills.
+      </p>
 
-    <div class="timeline">
-      <!-- Experience 1 -->
-      <div class="timeline__item fade-in">
-        <div class="timeline__dot"></div>
-        <span class="timeline__date">2022 — 2025</span>
-        <div class="timeline__content">
-          <h3 class="timeline__role">Teacher Assistant (Part-time)</h3>
-          <p class="timeline__company">TreeHouse ChildCare</p>
-          <p class="timeline__text">
-            Assisted teachers in delivering lessons and supporting classroom activities.
-            Led classes as a substitute teacher and adapted to different learning needs.
-            Developed strong communication, patience, and teamwork skills.
-          </p>
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2022 — 2025</span>
+          <div class="timeline__content">
+            <h3 class="timeline__role">Teacher Assistant (Part-time)</h3>
+            <p class="timeline__company">TreeHouse ChildCare</p>
+            <p class="timeline__text">
+              Assisted teachers in delivering lessons and supporting classroom activities.
+              Led classes as a substitute teacher and adapted to different learning needs.
+              Developed strong communication, patience, and teamwork skills.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <!-- Experience 2 -->
-      <div class="timeline__item fade-in">
-        <div class="timeline__dot"></div>
-        <span class="timeline__date">2022 — 2023</span>
-        <div class="timeline__content">
-          <h3 class="timeline__role">Teacher Assistant (Part-time)</h3>
-          <p class="timeline__company">Megamind</p>
-          <p class="timeline__text">
-            Supported lesson preparation and classroom management.
-            Assisted students and provided guidance during learning activities.
-            Demonstrated responsibility and adaptability in a dynamic teaching environment.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============================================
-     EXTRACURRICULAR SECTION
-     ============================================ -->
-<section class="section section--center" id="extracurricular">
-  <div class="container">
-    <span class="section__label">Beyond The Classroom</span>
-    <h2 class="section__title">Extracurricular</h2>
-    <p class="section__subtitle">
-      Volunteer and community activities that built my leadership,
-      teamwork, and sense of social responsibility.
-    </p>
-
-    <div class="timeline">
-      <!-- Volunteer 1 -->
-      <div class="timeline__item fade-in">
-        <div class="timeline__dot"></div>
-        <span class="timeline__date">2025</span>
-        <div class="timeline__content">
-          <h3 class="timeline__role">Blood Donation Campaign Committee Member</h3>
-          <p class="timeline__company">Volunteer Activity</p>
-          <p class="timeline__text">
-            Managed refreshment distribution for donors and organized certificate distribution efficiently.
-            Worked with team members to ensure smooth event execution.
-          </p>
-        </div>
-      </div>
-
-      <!-- Volunteer 2 -->
-      <div class="timeline__item fade-in">
-        <div class="timeline__dot"></div>
-        <span class="timeline__date">2023 — Present</span>
-        <div class="timeline__content">
-          <h3 class="timeline__role">Community Service Volunteer</h3>
-          <p class="timeline__company">Temple Community Service</p>
-          <p class="timeline__text">
-            Prepared and distributed vegetarian meals to the community. Maintained hygiene
-            and organization during service. Contributed to a positive and supportive environment.
-          </p>
+        <!-- Experience 2 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2022 — 2023</span>
+          <div class="timeline__content">
+            <h3 class="timeline__role">Teacher Assistant (Part-time)</h3>
+            <p class="timeline__company">Megamind</p>
+            <p class="timeline__text">
+              Supported lesson preparation and classroom management.
+              Assisted students and provided guidance during learning activities.
+              Demonstrated responsibility and adaptability in a dynamic teaching environment.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- ============================================
+       EXTRACURRICULAR SECTION
+       ============================================ -->
+  <section class="section section--center" id="extracurricular">
+    <div class="container">
+      <span class="section__label">Beyond The Classroom</span>
+      <h2 class="section__title">Extracurricular</h2>
+      <p class="section__subtitle">
+        Volunteer and community activities that built my leadership,
+        teamwork, and sense of social responsibility.
+      </p>
+
+      <div class="timeline">
+        <!-- Volunteer 1 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2025</span>
+          <div class="timeline__content">
+            <h3 class="timeline__role">Blood Donation Campaign Committee Member</h3>
+            <p class="timeline__company">Volunteer Activity</p>
+            <p class="timeline__text">
+              Managed refreshment distribution for donors and organized certificate distribution efficiently.
+              Worked with team members to ensure smooth event execution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Volunteer 2 -->
+        <div class="timeline__item fade-in">
+          <div class="timeline__dot"></div>
+          <span class="timeline__date">2023 — Present</span>
+          <div class="timeline__content">
+            <h3 class="timeline__role">Community Service Volunteer</h3>
+            <p class="timeline__company">Temple Community Service</p>
+            <p class="timeline__text">
+              Prepared and distributed vegetarian meals to the community. Maintained hygiene
+              and organization during service. Contributed to a positive and supportive environment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================
        EDUCATION SECTION
@@ -589,7 +585,7 @@
 
         <div class="contact__info-item">
           <div class="contact__info-icon">
-            <i class="lucide-phone"></i>
+            <i data-lucide="phone"></i>
           </div>
           <div>
             <div class="contact__info-label">Phone</div>
@@ -599,7 +595,7 @@
 
         <div class="contact__info-item">
           <div class="contact__info-icon">
-            <i class="lucide-mail"></i>
+            <i data-lucide="mail"></i>
           </div>
           <div>
             <div class="contact__info-label">Email</div>
@@ -609,7 +605,7 @@
 
         <div class="contact__info-item">
           <div class="contact__info-icon">
-            <i class="lucide-map-pin"></i>
+            <i data-lucide="map-pin"></i>
           </div>
           <div>
             <div class="contact__info-label">Location</div>
@@ -619,7 +615,7 @@
 
         <div class="contact__info-item">
           <div class="contact__info-icon">
-            <i class="lucide-user"></i>
+            <i data-lucide="user"></i>
           </div>
           <div>
             <div class="contact__info-label">Reference — Ms. Joan Hau (Supervisor)</div>
@@ -648,8 +644,12 @@
 
   <!-- Scroll-to-top -->
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <i class="lucide-arrow-up"></i>
+    <i data-lucide="arrow-up"></i>
   </button>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
 
   <!-- JavaScript -->
   <script src="main.js"></script>
