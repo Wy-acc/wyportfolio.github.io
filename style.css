@@ -151,7 +151,7 @@ ul {
   background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
   color: #fff;
   box-shadow: 0 4px 20px rgba(108, 99, 255, 0.35);
-  margin-top: 1rem;
+  margin-top: 2.0rem; 
 }
 
 .btn--primary:hover {
